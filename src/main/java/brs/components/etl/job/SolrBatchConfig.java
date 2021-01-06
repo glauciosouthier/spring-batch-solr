@@ -77,7 +77,7 @@ public class SolrBatchConfig {
         TaskExecutorPartitionHandler retVal = new TaskExecutorPartitionHandler();
         retVal.setTaskExecutor(taskExecutor());
         retVal.setStep(indexingStep);
-        retVal.setGridSize(10);
+        retVal.setGridSize(5);
         return retVal;
     }
     
@@ -96,7 +96,7 @@ public class SolrBatchConfig {
             .writer(writer)
             //estrategia  Multi-threaded Step
             //.taskExecutor(taskExecutor)
-            //.throttleLimit(10)
+            //.throttleLimit(5)
             .build();
     }
 

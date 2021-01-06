@@ -21,156 +21,155 @@ import lombok.Data;
 public class Document {
 	public static final String COLLECTION_NAME = "juris";
 	
-	@XmlElement(name = "ID") //atributo para ws-soap
+	
 	@JsonProperty("id")//atributo para RestClientSolr
 	@Id
-	@Indexed(name = "id", type = "string")//atributo para spring-data-solr
+	@Indexed(name = "id")//atributo para spring-data-solr
 	private String id;
 	
-	@XmlElement(name = "DOCN")
+
 	@JsonProperty("docn")
-	@Indexed(name = "docn", type = "string")
+	@Indexed(name = "docn")
 	private String docn;
 	
-	@XmlElement(name = "CLAS")
+
 	@JsonProperty("classe")
-	@Indexed(name = "classe", type = "string")
+	@Indexed(name = "classe")
 	private String clas;
 	
 	@XmlElement(name = "ORIG")
 	@JsonProperty("origem")
-	@Indexed(name = "origem", type = "string")
+	@Indexed(name = "origem")
 	private String orig;
 	
-	@XmlElement(name = "PROC")
+	
 	@JsonProperty("processo")
-	@Indexed(name = "processo", type = "string")
+	@Indexed(name = "processo")
 	private String proc;
 	
-	@XmlElement(name = "UF")
+	
 	@JsonProperty("uf")
-	@Indexed(name = "uf", type = "string")
+	@Indexed(name = "uf")
 	private String uf;
 	
-	@XmlElement(name = "ORGA")
+	
 	@JsonProperty("orgao_julgador")
-	@Indexed(name = "orgao_julgador", type = "string")
+	@Indexed(name = "orgao_julgador")
 	private String orga;
 	
-	@XmlElement(name = "DTDE")
+	
 	@JsonProperty("data_decisao")
-	@Indexed(name = "data_decisao", type = "string")
+	@Indexed(name = "data_decisao")
 	private String dtde;
 	
-	@XmlElement(name = "DTDP")
+	
 	@JsonProperty("data_decisao_pesq")
-	@Indexed(name = "data_decisao_pesq", type = "string")
+	@Indexed(name = "data_decisao_pesq")
 	private String dtdp;
 
-	@XmlElement(name = "FONT")
+	
 	@JsonProperty("fonte_publicacao")
-	@Indexed(name = "fonte_publicacao", type = "string")
+	@Indexed(name = "fonte_publicacao")
 	private String font;
 	
-	@XmlElement(name = "FONT1")
+	
 	@JsonProperty("font1")
 	private String font1;
 
-	@XmlElement(name = "FONT2")
+	
 	@JsonProperty("font2")
 	private String font2;
 	
-	@XmlElement(name = "FONT3")
+	
 	@JsonProperty("font3")
 	private String font3;
 	
-	private String rel;
-	
-	@XmlElement(name = "DECI")
+
 	@JsonProperty("decisao")
-	@Indexed(name = "decisao", type = "string")
+	@Indexed(name = "decisao")
 	private String deci;
 	
-	@XmlElement(name = "OBS")
+	
 	@JsonProperty("observacoes")
-	@Indexed(name = "observacoes", type = "string")
+	@Indexed(name = "observacoes")
 	private String obs;
 	
-	@XmlElement(name = "EMEN")
+	
 	@JsonProperty("ementa")
-	@Indexed(name = "ementa", type = "string")
+	@Indexed(name = "ementa")
 	private String emen;
 	
-	@XmlElement(name = "INDE")
+	
 	@JsonProperty("indexacao")
-	@Indexed(name = "indexacao", type = "string")
+	@Indexed(name = "indexacao")
 	private String inde;
 	
-	@XmlElement(name = "DTPP")
+	
 	@JsonProperty("data_publicacao_pesq")
-	@Indexed(name = "data_publicacao_pesq", type = "string")
+	@Indexed(name = "data_publicacao_pesq")
 	private String dtpp;
-	/**
-	 * Atributo relativo ao parágrafo RELA
-	 */
-	@XmlElement(name = "RELA")
+	
 	@JsonProperty("relator")
-	@Indexed(name = "relator", type = "string")
+	@Indexed(name = "relator")
+	private String rel;
+	
+	@JsonProperty("relator_acordao")
+	@Indexed(name = "relator_acordao")
 	private String rela;
 	
-	@XmlElement(name = "REV")
+	
 	@JsonProperty("revisor")
-	@Indexed(name = "revisor", type = "string")
+	@Indexed(name = "revisor")
 	private String rev;
 
-	@XmlElement(name = "RELC")
+	
 	@JsonProperty("relator_convocado")
-	@Indexed(name = "relator_convocado", type = "string")
+	@Indexed(name = "relator_convocado")
 	private String relc;
 
-	@XmlElement(name = "OUTF")
+	
 	@JsonProperty("outras_fontes")
-	@Indexed(name = "outras_fontes", type = "string")
+	@Indexed(name = "outras_fontes")
 	private String outf;
 
-	@XmlElement(name = "PREC")
+	
 	@JsonProperty("precedentes")
-	@Indexed(name = "precedentes", type = "string")
+	@Indexed(name = "precedentes")
 	private String prec;
 
-	@XmlElement(name = "SUCE")
+
 	@JsonProperty("sucessivos")
-	@Indexed(name = "sucessivos", type = "string")
+	@Indexed(name = "sucessivos")
 	private String suce;
 
-	@XmlElement(name = "DOUT")
+	
 	@JsonProperty("doutrina")
-	@Indexed(name = "doutrina", type = "string")
+	@Indexed(name = "doutrina")
 	private String dout;
 
-	@XmlElement(name = "CATA")
+	
 	@JsonProperty("catalogo")
-	@Indexed(name = "catalogo", type = "string")
+	@Indexed(name = "catalogo")
 	private String cata;
 
-	@XmlElement(name = "REFL")
+	
 	@JsonProperty("ref_legislativa")
-	@Indexed(name = "ref_legislativa", type = "string")
+	@Indexed(name = "ref_legislativa")
 	private String refl;
 
-	@XmlElement(name = "PRFO")
+	
 	@JsonProperty("processo_formatado")
-	@Indexed(name = "processo_formatado", type = "string")
+	@Indexed(name = "processo_formatado")
 	private String prfo;
 
-	@XmlElement(name = "OURE")
+	
 	@JsonProperty("outras_referencias")
-	@Indexed(name = "outras_referencias", type = "string")
+	@Indexed(name = "outras_referencias")
 	private String oure;
 
-	@XmlElement(name = "TXTO")
+	
 	@JsonProperty("txt_origem")
-	@Indexed(name = "txt_origem", type = "string")
+	@Indexed(name = "txt_origem")
 	private String txto;
 
 	@XmlTransient
@@ -179,57 +178,59 @@ public class Document {
 	@XmlTransient
 	private String hisa;
 
-	@XmlElement(name = "TRIB")
+	
 	@JsonProperty("tribunal")
-	@Indexed(name = "tribunal", type = "string")
+	@Indexed(name = "tribunal")
 	private String trib;
 
-	@XmlElement(name = "OBPR")
+	
 	@JsonProperty("objeto_processo")
-	@Indexed(name = "objeto_processo", type = "string")
+	@Indexed(name = "objeto_processo")
 	private String obpr;
 
 	@XmlElement(name = "RESP")
 	@JsonProperty("relator_suplente")
-	@Indexed(name = "relator_suplente", type = "string")
+	@Indexed(name = "relator_suplente")
 	private String resp;
 
-	@XmlElement(name = "LITE")
+	
 	@JsonProperty("link_inteiro_teor")
-	@Indexed(name = "link_inteiro_teor", type = "string")
+	@Indexed(name = "link_inteiro_teor")
 	private String lite;
 
-	@XmlElement(name = "ITEO")
+	
 	@JsonProperty("inteiro_teor")
-	@Indexed(name = "inteiro_teor", type = "string")
+	@Indexed(name = "inteiro_teor")
 	private String iteo;
 	
-	@XmlElement(name = "INTE")
+	
 	// @JsonProperty("INTEIRO_TEOR")
 	//copiado pelo solr
 	private String inte;
 	
-	@XmlElement(name = "TIPO")
+
 	@JsonProperty("tipo_documento")
-	@Indexed(name = "tipo_documento", type = "string")
+	@Indexed(name = "tipo_documento")
 	private String tipo;
 
-	@XmlTransient
-	@Indexed(name = "base", type = "string")
+
+	@Indexed(name = "base")
 	private String base;
-	@XmlTransient
+	
+	
 	private String pftr;
 
-	@XmlElement(name = "SIGC")
+	
 	@JsonProperty("sigla_classe")
-	@Indexed(name = "sigla_classe", type = "string")
+	@Indexed(name = "sigla_classe")
 	private String sigc;
 	
-	@Indexed(name = "timestamp", type = "long")
+	@Indexed(name = "timestamp")
 	private Long timestamp;
         
     @Indexed("last_modified")
     private LocalDateTime lastModified;
+    
     @Score
     private float score;
 }
